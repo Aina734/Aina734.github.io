@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Hobby display page">
+        <meta name="keywords" content="CSS, HTML Tailwind framework">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Stefania De Abreu" >
+        <title>Hobby display</title>
+        <link href="portfolio.css"  rel="stylesheet">
+    <!--Fonts (3 types - Andika "for paraghaph and text" fallback (Tahoma, sans-serif)
+    - Macondo "for headings" fallback (Georgia, serif) ) - Aladin "for buttons" fallback (Garamond, serif)-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aladin&family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Macondo&display=swap" rel="stylesheet">
+
+<!--Adding Fontawesome CDN-->
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <!--tailwind-->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
+    </head>
+
+
+
+    <body class="bg-linear-to-b/decreasing from-sky-100 to-teal-300">
+
+        <header class="bg-gradient-to-b from-rose-400 to-rose-800">
+        <nav class="flex flex-row justify-between">
+
+             <div>
+                    <h1 class="text-4xl text-slate-200 pl-2">Stefania De Abreu</h1>
+            </div>
+        
+            <div>
+            <ul class="flex justify-between">
+
+                <li class="px-2 border-double border-r-5 border-slate-200">
+                    <a href="#home" class="text-decoration-none">Home</a></li>
+
+                <li class="px-2 border-double border-r-5 border-slate-200">
+                    <a href="#about" class="text-decoration-none">About</a></li>
+
+                <li class="px-2 border-double border-r-5 border-slate-200">
+                    <a href="#hobbies"  class="text-decoration-none">My Hobbies</a></li>
+
+                <li class="px-2 border-double border-r-5 border-slate-200">
+                    <a href="#contact" class="text-decoration-none">Contact!</a></li>
+                <li class="px-2" ><!--Add a darkmode logo--></li>
+
+            </ul>
+                </div>
+        </nav>
+        </header>
+
+        <main>
+            <!--Hero banner start here-->
+            <section class="hero-banner">
+                
+                <h2 id="home" style="grid-area: hero-title" class="text-center pt-2 text-3xl">Passionate About</h2>
+
+                        <div style="grid-area: hero-item-1;"
+                            class="flex flex-col justify-center ml-4">
+                               
+                                <h3 class="text-center text-2xl">Plants & Animals</h3>
+                                <img src="https://placehold.co/600x400/png" alt="animals & Plants">
+                        </div>
+                   
+                        <div style="grid-area: hero-item-2;"
+                            class="flex flex-col justify-center" >
+
+                                <h3 class="text-center text-2xl">Digital & Traditional Illustation</h3>
+                                <img src="https://placehold.co/600x400/png" alt="Nice Illustration made by me">
+                        </div>
+
+                            <div  style="grid-area: hero-item-3;"
+                            class="flex flex-col justify-center mr-4">
+
+                                 <h3 class="text-center text-2xl">Game Dev & Music Composition</h3>
+                                 <img src="https://placehold.co/600x400/png" alt="Game dev symbol or music composition">
+                        </div>
+            </section>
+   <!--About start here-->
+            <section>
+                <h2 id="about" class="text-center pt-4 pb-2 text-3xl">About Me</h2> 
+
+                <div class="flex flex-col flex-wrap flex-grow flex-shrink">
+
+              <div>
+                <p>I love to examine plants and animals, I was able to learn a bit more deeply about plants family naming 
+                    and decide to search about it's similarities, uses (including in tales and fantasy settings) I 
+                    find having a hobby to be great at easing tension and quite informative
+                </p>
+                </div>
+
+                <div>
+                <p>Drawing is really fun and it's a great observation exercise, trying to get an idea down in a file or 
+                    paper it's rewarding, you kind of zoom out at times but leaving some creativity run wild while 
+                    figuring out how to make out an effect like fog or flames, how does the things around the drawing are 
+                    affected. I put more time into digital color application but I also enjoy the sketch, it's also great
+                    to compare how you progress with the practice you put into it 
+                </p>
+                </div>
+
+                <div>
+                <p>Game Dev is something I still cosidere a hobby, I haven't got enough practice to actually 
+                completely build something and put it out there, but is a hobby that I hope to turn into a 
+                goal, it get frustrating but being able to accomplish little things it's truly rewarding. 
+
+                Music composition it's also nice (I know why music composition so center into boring music theory)
+                well you will be surprise, music theory might no be a easy, but it has so much potential so instead
+                of learning (torturing someone) violin I find it more useful to learn the building blocks and apply
+                them with a DAWs (Digital Audio Workstation). It feel more or less like drawing, like trying to
+                explain a something (experience-situation-emotion and so on) with sounds and rhythms
+                </p>
+                </div>
+
+                <div>
+                <p>I support the though of integral individuals who can develop beyond what is expected in our common 
+                    enviroment (work-social-cricle I think you get it already) so Hurray for everyone who decide to embark
+                     in this wonderful life-long tarvel of knowledge adquisition with all it's hurdles and challenges!! 
+                </p>
+                </div>
+
+              </div>
+            </section>
+<!--sleide of hobbies-->
+            <section class="main-hobby-slide">
+
+                <h2 id="hobbies" class="text-center pt-4 pb-2 text-3xl">My Hobbies</h2>
+
+                <input type="radio" name="position">
+                <input type="radio" name="position" checked>
+                <input type="radio" name="position">
+
+                <aside id="carousel">
+                        <div class="item">
+                            <img src="https://placehold.co/600x400/png" alt="Botany">
+
+                            <button onclick=""
+                            class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded">
+                                Visit
+                            </button>
+
+                        </div>
+                   
+                        <div class="item">
+
+                            <img src="https://placehold.co/600x400/png" alt="Animals & Insects">
+
+                            <button onclick=""
+                            class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded">
+                                Visit
+                            </button>
+
+                        </div>
+            
+                        <div class="item">
+                            <img src="https://placehold.co/600x400/png" alt="Animals & Insects">
+
+                              <button onclick=""
+                            class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded">
+                                Visit
+                            </button>
+                        </div>
+
+                </aside>
+
+            </section><!--I want to add an slider to roll between the hobbies -->
+
+        </main>
+        <footer>
+            <aside>
+                <h3 id="contact">Contact</h3>
+                <p>Email: mail@gmail.com</p>
+            </aside>
+            <aside>
+                <h3>Thanks for Your Visit!</h3>
+                <img src="https://placehold.co/600x400/png" alt="Thank you!">
+                <p>see you later!</p>
+            </aside>
+        <div>
+            <p>&copy; Stefania De Abreu</p>
+            <p>Special Thanks and credit for graphic media to:</p><!--Add Fili if I use any of her illustrations-->
+        </div>
+        </footer>
+    </body>
+</html>
