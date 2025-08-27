@@ -49,4 +49,16 @@ img {
     "hero-item-1 hero-item-1 hero-item-2 hero-item-2 hero-item-3 hero-item-3";
 }
 /*Slider styles*/
-
+.main-port-slide {
+  background: #8c52ff;
+  height: 37.5em;
+  margin: 0;
+  display:grid;
+  grid-template-columns: 1fr 2em 2em 2em 2em 2em 1fr;
+  grid-template-rows: 35em 7em;
+  justify-items: center;
+  align-items: center;
+}
+.item img {
+  
+}
