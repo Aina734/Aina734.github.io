@@ -50,17 +50,19 @@ img {
 }
 /*Slider styles*/
 
-#main-port-slide {
-  margin: 0;
-  background:rgba(0, 0, 0, 0.788);
-  display:grid;
-  height: 40em;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 30em 10em;
-  justify-items: center;
-  align-items: center;
 
+#main-port-slide {
+   background:rgba(0, 0, 0, .95);
+    height: 600px;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 500px 100px;
+    grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+    align-items: center;
+    justify-items: center;
+    font-family: 'Poppins', sans-serif;
 }
+
 .item img {
     width: auto;
     height: auto;
@@ -68,22 +70,72 @@ img {
     margin-top: 15px;
 }
 #carousel {
-  grid-column: 1/ 8; /*to adjust the items in the grid*/
-  grid-row: 1/ 2;
-  display: flex; /*to put all the items inline*/
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  transform-style: preserve-3d;
-  /*perspective: 600px; /*check this property in a bit to see why is not making effect*/
-  --items: 3;
-  --mid: 2;
-  --pos: 1;
-  pointer-events: none;
+    grid-row: 1 / 2;
+    grid-column: 1 / 8;  /*to adjust the items in the grid*/
+    width: 100vw;
+    height: 300px;
+    display: flex; /*to put all the items inline*/
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 500px; /*check this property in a bit to see why is not making effect*/
+    --items: 3;
+    --middle: 2;
+    --position: 1;
+    pointer-events: none;
 }
+
 .item {
-  background-color: rgb(245, 250, 255);
-  position: absolute;/*position is causing problems*/
+    text-align: center;
+    padding: 50px;
+    border: 3px solid black;
+    border-top-right-radius: 20%;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 20%;
+    background-color: #fff;
+    position: absolute;
+    width: 300px;
+    height: auto;
+    background-color: white;
+    --r: calc(var(--position) - var(--offset));
+    --abs: max(calc(var(--r) * -1), var(--r));
+    transition: all 0.4s linear;
+    transform: rotateY(calc(-12deg * var(--r)))
+    translateX(calc(-310px * var(--r)));
+    z-index: calc((var(--position) - var(--abs)));
+}
 
+div.item:nth-of-type(1) {
+    --offset: 1;
+}
+div.item:nth-of-type(2) {
+    --offset: 2;
+}
+div.item:nth-of-type(3) {
+    --offset: 3;
+}
 
+input:nth-of-type(1):checked ~ aside#carousel {
+    --position: 1;
+}
+
+input:nth-of-type(1) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(2) {
+    grid-column: 3/ 4;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(2):checked ~ aside#carousel {
+    --position: 2;
+}
+input:nth-of-type(3) {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(3):checked ~ aside#carousel {
+    --position: 3;
 }
