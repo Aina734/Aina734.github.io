@@ -49,17 +49,41 @@ img {
     "hero-item-1 hero-item-1 hero-item-2 hero-item-2 hero-item-3 hero-item-3";
 }
 /*Slider styles*/
+
 #main-port-slide {
+  margin: 0;
   background:rgba(0, 0, 0, 0.788);
-    height: 600px;
-    margin: 0;
+  display:grid;
+  height: 40em;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 30em 10em;
+  justify-items: center;
+  align-items: center;
+
 }
 .item img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    width: auto;
+    height: auto;
+    border-radius: 30%;
     margin-top: 15px;
 }
-#caurosel {
+#carousel {
+  grid-column: 1/ 8; /*to adjust the items in the grid*/
+  grid-row: 1/ 2;
+  display: flex; /*to put all the items inline*/
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  /*perspective: 600px; /*check this property in a bit to see why is not making effect*/
+  --items: 3;
+  --mid: 2;
+  --pos: 1;
+  pointer-events: none;
+}
+.item {
+  background-color: rgb(245, 250, 255);
+  position: absolute;/*position is causing problems*/
+
 
 }
