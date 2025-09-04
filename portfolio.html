@@ -38,16 +38,16 @@
             <ul class="flex justify-between">
 
                 <li class="px-2 border-double border-r-5 border-slate-200">
-                    <a href="#home" class="text-decoration-none">Home</a></li>
+                    <a href="#home" class="text-decoration-none text-gray-50">Home</a></li>
 
                 <li class="px-2 border-double border-r-5 border-slate-200">
-                    <a href="#about" class="text-decoration-none">About</a></li>
+                    <a href="#about" class="text-decoration-none text-gray-50">About</a></li>
 
                 <li class="px-2 border-double border-r-5 border-slate-200">
-                    <a href="#projects"  class="text-decoration-none">Projects</a></li>
+                    <a href="#projects"  class="text-decoration-none text-gray-50">Projects</a></li>
 
                 <li class="px-2 border-double border-r-5 border-slate-200">
-                    <a href="#contact" class="text-decoration-none">Contact!</a></li>
+                    <a href="#contact" class="text-decoration-none text-gray-50">Contact!</a></li>
                 <li class="px-2" ><!--Add a darkmode logo--></li>
 
             </ul>
@@ -123,7 +123,7 @@
 
     <h2 id="projects" class="text-center pt-4 pb-2 text-3xl">Come and check out my Projects</h2>
     
-    <section id="main-port-slide">
+    <div id="main-port-slide">
                 <input type="radio" name="position">
                 <input type="radio" name="position" checked>
                 <input type="radio" name="position">
@@ -166,7 +166,7 @@
 
                 </article>
 
-            </section> <!--I want to add an slider to roll between the hobbies -->
+            </div> <!--I want to add an slider to roll between the hobbies -->
 
         </main>
     <!--Start of footer section here-->
@@ -175,15 +175,22 @@
             <aside>
                 <h2 id="contact" 
                 class="text-3xl text-center">Contact</h2>
-                 <div class="flex justify-around items-center">
-                <div>  
+                <div class="flex justify-around items-center">
+
+                <div>
                 <h3 class="text-2xl text-center">Email:</h3>
                 <p class="p-4">mymail@somemail.com</p>
                 </div>
-                <a href="">
+                
+                
                     <div class="border-box w-40">
-                        <img src="./images/500px-Font_Awesome_5_brands_github.svg.png"
-                    class="w-full object-scale-down min-w-18"></a>
+                        <a href="" class="text-pink-900" >
+                            <img src="./images/500px-Font_Awesome_5_brands_github.svg.png" 
+                            alt="house icon"
+                    class="w-full object-scale-down min-w-18">
+                    </a>
+                    </div>
+
                 </div>            
             </aside>
 
@@ -192,7 +199,8 @@
                 <img src="https://placehold.co/600x400/png"
                  alt="Thank you!" class="pb-7 min-w-80">
                 <p class="italic text-lg pb-2">See you later!</p>
-                <a href="#nav" class=""><div><i class="fa-solid fa-5x fa-house-chimney"></i></div></a>
+                <a href="#nav" class="text-rose-800"><div><i class="fa-solid fa-3x fa-beat fa-house-chimney"
+                    style="--fa-animation-duration: 1.5s"></i></div></a>
             </aside>
 
 

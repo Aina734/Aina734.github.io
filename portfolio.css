@@ -11,8 +11,7 @@ a, button {
   font-weight: 400;
   letter-spacing: .1rem;
   font-size: 1.5rem;
-  color: rgb(236, 246, 255);
-  text-decoration: none; 
+
 }
 
 p {
@@ -139,3 +138,4 @@ input:nth-of-type(3) {
 input:nth-of-type(3):checked ~ article#carousel {
     --position: 3;
 }
+
