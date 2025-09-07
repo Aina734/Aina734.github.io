@@ -138,4 +138,54 @@ input:nth-of-type(3) {
 input:nth-of-type(3):checked ~ article#carousel {
     --position: 3;
 }
+/*Animations on the page*/
 
+/*Title selector*/
+div > h1 {
+animation: moveShaping 5s infinite;
+}
+
+/*images of interest selector*/
+ :is(.port-banner img, aside img):hover {
+  animation: interactiveImg 3s;
+}
+
+/*Animation for title in nav*/
+@keyframes moveShaping {
+  0% {
+    transform: translate(0em) skew(0);
+  }
+  25% {
+    transform: translate(3em) skew(-0.6rad);
+  }
+  50% {
+    transform: translate(0) skew(0.312rad);
+  }
+  
+  100% {
+    transform: translate(0) skew(0);
+  }
+
+}
+
+/*Animation for images*/
+
+@keyframes interactiveImg {
+  0% {
+    transform: rotate(0);
+    border-radius: 0;
+  }
+  25% {
+    transform: rotate(10deg);
+    border-radius: 30px;
+  }
+  50% {
+    transform: rotate(-10deg);
+    border-radius: 30px;
+  }
+  
+  100% {
+    transform: rotate(0);
+  }
+
+}
