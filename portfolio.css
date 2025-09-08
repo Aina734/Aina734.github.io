@@ -147,7 +147,7 @@ animation: moveShaping 5s infinite;
 
 /*images of interest selector*/
  :is(.port-banner img, aside img):hover {
-  animation: interactiveImg 3s;
+  animation: interactiveImg 2.5s;
 }
 
 /*Animation for title in nav*/
@@ -175,15 +175,16 @@ animation: moveShaping 5s infinite;
     transform: rotate(0);
     border-radius: 0;
   }
+
   25% {
     transform: rotate(10deg);
-    border-radius: 30px;
+    border-radius: 15em;
   }
   50% {
     transform: rotate(-10deg);
-    border-radius: 30px;
+    border-radius: 15em;
   }
-  
+
   100% {
     transform: rotate(0);
   }
