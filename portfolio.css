@@ -53,6 +53,7 @@ img {
 #main-port-slide {
    background:rgba(0, 0, 0, .95);
     height: 600px;
+    width: auto;
     margin: 0;
     display: grid;
     grid-template-rows: 500px 100px;
@@ -138,6 +139,31 @@ input:nth-of-type(3) {
 input:nth-of-type(3):checked ~ article#carousel {
     --position: 3;
 }
+
+/*Credits to add by interacting*/
+
+  footer > div .credits {
+    cursor: pointer;
+  }
+
+    footer > div #firstOne:hover::after {
+    white-space: pre;
+    content: "<< devressions >>";
+    font-style: italic;
+    font-size: 1.2rem;
+    padding-left: 0 .8em;
+  }
+
+  footer > div #secondOne:hover::after{
+    white-space: pre;
+    content: "<< Fili De Abreu (Yuushishi) >>";
+    font-style: italic;
+    font-size: 1.2rem;
+    padding: 0 .8em;
+  }
+
+
+
 /*Animations on the page*/
 
 /*Title selector*/
@@ -153,17 +179,17 @@ animation: moveShaping 5s infinite;
 /*Animation for title in nav*/
 @keyframes moveShaping {
   0% {
-    transform: translate(0em) skew(0);
+    transform: translate(.3em) skew(0);
   }
   25% {
     transform: translate(3em) skew(-0.6rad);
   }
   50% {
-    transform: translate(0) skew(0.312rad);
+    transform: translate(.3em) skew(0.312rad);
   }
   
   100% {
-    transform: translate(0) skew(0);
+    transform: translate(.3em) skew(0);
   }
 
 }
@@ -189,4 +215,73 @@ animation: moveShaping 5s infinite;
     transform: rotate(0);
   }
 
+}
+/*Media queries breakpoint trial since it doesn't work like i want with tailwind*/
+
+/*mobiile phone*/
+@media only screen and (min-width:350px) and (max-width:500px){
+  
+  h1{
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+    nav {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(17, 24, 22);
+  }
+
+  nav > div > ul a {
+    font-size: 1.1rem;
+  }
+
+  nav > div > ul > li {
+    padding: 0 1em;
+  }  
+
+  .port-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2em;
+    padding: 1.2em;
+  }
+  .port-banner div {
+     margin: 0;
+  }
+ #myInfo p {
+  padding: .3em .7em;
+ }
+  footer > div{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+    #firstOne::after {
+     white-space: pre;
+    content: "<< devressions >>";
+    padding: 2em;
+    line-height: 2rem;
+
+    }
+    
+    footer > div p + p::after {
+     white-space: pre;
+     content: "<< Fili De Abreu (Yuushishi) >>";
+     padding: 2em;
+     line-height: 2rem;
+    }
+
+    #firstOne, #secondOne {
+      font-size: .9rem;
+    }
+
+    footer > div {
+      text-align: center;
+    }
 }
