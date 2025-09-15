@@ -242,7 +242,11 @@ animation: moveShaping 5s infinite;
 
   nav > div > ul > li {
     padding: 0 1em;
-  }  
+  } 
+
+  /*Add animation trials for mobile*/ 
+  
+
 
   .port-banner {
     display: flex;
