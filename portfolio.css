@@ -176,6 +176,11 @@ animation: moveShaping 5s infinite;
   animation: interactiveImg 2.5s;
 }
 
+#myInfo > div {
+   animation: aboutContainerBg 5s 1s linear infinite;
+
+}
+
 /*Animation for title in nav*/
 @keyframes moveShaping {
   0% {
@@ -193,6 +198,38 @@ animation: moveShaping 5s infinite;
   }
 
 }
+
+/*Animation for about section background*/
+
+@keyframes aboutContainerBg {
+ 
+  0% {
+    background: linear-gradient(rgba(36, 36, 81,.3), rgba(225, 90, 182, .3),rgba(70, 30, 165, .3));
+  }
+ 
+    15% {
+     background: linear-gradient(rgba(36, 36, 81, .5), rgba(225, 90, 182, .5),rgba(70, 30, 165, .5));
+  
+     }
+     40% {
+     background: linear-gradient(rgba(36, 36, 81, .7), rgba(225, 90, 182, .7),rgba(70, 30, 165, .7));
+     
+     }
+      60% {
+     background: linear-gradient(rgba(36, 36, 81, 1), rgba(225, 90, 182, 1),rgba(70, 30, 165, 1));
+     }
+      85% {
+     background: linear-gradient(rgba(36, 36, 81, .7), rgba(225, 90, 182, .7),rgba(70, 30, 165, .7));  
+     }
+      90% {
+     background: linear-gradient(rgba(36, 36, 81, .7), rgba(225, 90, 182, .5),rgba(70, 30, 165, .5));
+    
+     }
+     100% {
+     background: linear-gradient(rgba(36, 36, 81, .5), rgba(225, 90, 182, .5),rgba(70, 30, 165, .5));
+     }
+}
+
 
 /*Animation for images*/
 
