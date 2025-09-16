@@ -146,20 +146,22 @@ input:nth-of-type(3):checked ~ article#carousel {
     cursor: pointer;
   }
 
-    footer > div #firstOne:hover::after {
-    white-space: pre;
-    content: "<< devressions >>";
+    footer > div #firstOne::after {
     font-style: italic;
+    font-weight: bold;
     font-size: 1.2rem;
-    padding-left: 0 .8em;
+    padding-left: 0 .5em;
+    content: "";
+    animation: creditDevression infinite 5s;
   }
 
-  footer > div #secondOne:hover::after{
-    white-space: pre;
-    content: "<< Fili De Abreu (Yuushishi) >>";
+  footer > div #secondOne::after{
     font-style: italic;
+    font-weight: bold;
     font-size: 1.2rem;
-    padding: 0 .8em;
+    padding: 0 .5em;
+    content: "";
+    animation: creditYuushishi infinite 5s;
   }
 
 
@@ -251,7 +253,106 @@ animation: moveShaping 5s infinite;
   100% {
     transform: rotate(0);
   }
+}
 
+
+/* Credits text animations*/
+/* devressions */
+
+@keyframes creditDevression {
+  0% {
+    content: "< >";
+  }
+
+  8% {
+    content: "<< >>";
+  }
+  12% {
+   content: "<< d >>";
+  }
+
+  18% {
+   content: "<< de >>";
+  } 
+  22% {
+   content: "<< dev >>";
+  }
+  28% {
+   content: "<< devr >>";
+  }
+  34% {
+   content: "<< devre >>";
+  }
+  40% {
+   content: "<< devres >>";
+  }
+  46% {
+   content: "<< devress >>";
+  }
+  52% {
+   content: "<< devressi >>";
+  }
+  58% {
+   content: "<< devressio >>";
+  }
+  64% {
+   content: "<< devression >>";
+  }
+  68% {
+   content: "<< devressions >>";
+  }
+   100% {
+   content: "<< devressions >>";
+  }
+}
+/* Fili */
+
+@keyframes creditYuushishi {
+  /*<< Fili De Abreu (Yuushishi) >>*/
+  0% {
+    content: "< >";
+  }
+
+  8% {
+    content: "<< >>";
+  }
+  12% {
+   content: "<< F ( >>";
+  }
+
+  18% {
+   content: "<< Fi (Y  >>";
+  } 
+  22% {
+   content: "<< Fil (Yu >>";
+  }
+  32% {
+   content: "<< Fili (Yuu >>";
+  }
+  40% {
+   content: "<< Fili D (Yuus >>";
+  }
+  48% {
+   content: "<< Fili De (Yuush >>";
+  }
+  52% {
+   content: "<< Fili De A (Yuushi >>";
+  }
+  58% {
+   content: "<< Fili De Ab (Yuushis >>";
+  }
+  62% {
+   content: "<< Fili De Abr (Yuushish  >>";
+  }
+  66% {
+   content: "<< Fili De Abre (Yuushishi >>";
+  }
+  70% {
+   content: "<< Fili De Abreu (Yuushishi) >>";
+  }
+  100% {
+   content: "<< Fili De Abreu (Yuushishi) >>";
+  }
 }
 /*Media queries breakpoint trial since it doesn't work like i want with tailwind*/
 
