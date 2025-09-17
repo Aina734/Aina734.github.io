@@ -147,19 +147,19 @@ input:nth-of-type(3):checked ~ article#carousel {
   }
 
     footer > div #firstOne::after {
+    padding:0;
     font-style: italic;
     font-weight: bold;
     font-size: 1.2rem;
-    padding-left: 0 .5em;
     content: "";
     animation: creditDevression infinite 5s;
   }
 
   footer > div #secondOne::after{
+    padding: 0;
     font-style: italic;
     font-weight: bold;
     font-size: 1.2rem;
-    padding: 0 .5em;
     content: "";
     animation: creditYuushishi infinite 5s;
   }
@@ -213,22 +213,23 @@ animation: moveShaping 5s infinite;
      background: linear-gradient(rgba(36, 36, 81, .5), rgba(225, 90, 182, .5),rgba(70, 30, 165, .5));
   
      }
-     40% {
+     30% {
      background: linear-gradient(rgba(36, 36, 81, .7), rgba(225, 90, 182, .7),rgba(70, 30, 165, .7));
      
      }
-      60% {
-     background: linear-gradient(rgba(36, 36, 81, 1), rgba(225, 90, 182, 1),rgba(70, 30, 165, 1));
+      40% {
+     background: linear-gradient(rgb(216, 209, 201), rgba(255, 249, 236, 0.7),rgba(255, 244, 191, 0.7), rgba(255, 250, 198, 0.7));
      }
-      85% {
-     background: linear-gradient(rgba(36, 36, 81, .7), rgba(225, 90, 182, .7),rgba(70, 30, 165, .7));  
+      55% {
+     background: linear-gradient(rgb(216, 209, 201, .8), rgba(255, 249, 236, .8),rgba(255, 244, 191, .8), rgba(255, 250, 198, .8));
      }
       90% {
-     background: linear-gradient(rgba(36, 36, 81, .7), rgba(225, 90, 182, .5),rgba(70, 30, 165, .5));
-    
+     background: linear-gradient(rgb(216, 209, 201, 1), rgba(255, 249, 236, 1),rgba(255, 244, 191, 1), rgba(255, 250, 198, 1));
      }
+  
+     
      100% {
-     background: linear-gradient(rgba(36, 36, 81, .5), rgba(225, 90, 182, .5),rgba(70, 30, 165, .5));
+     background: linear-gradient(rgb(216, 209, 201, 1), rgba(255, 249, 236, 1),rgba(255, 244, 191, 1), rgba(255, 250, 198, 1));
      }
 }
 
@@ -356,6 +357,152 @@ animation: moveShaping 5s infinite;
 }
 /*Media queries breakpoint trial since it doesn't work like i want with tailwind*/
 
+/*Tablet version 1*/
+@media only screen and (min-width:501px) and (max-width:650px) {
+ h1 {
+    font-size: 2.8rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+    nav {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(7, 57, 110);
+  }
+
+  nav > div > ul a {
+    font-size: 1.5rem;
+  }
+
+  nav > div > ul > li {
+    padding: 0 1em;
+  } 
+
+  .port-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2em;
+    padding: 1.2em;
+  }
+  .port-banner div {
+     margin: 0;
+  }
+ #myInfo p {
+  padding: .3em .7em;
+ }
+  footer > div{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+    #firstOne::after {
+    white-space: pre;
+    content: "";
+    padding: 2em;
+    }
+    
+    footer > div p + p::after {
+     white-space: pre;
+     content: "";
+     padding: 2em;
+    }
+
+      #firstOne, #secondOne {
+      font-size: 1.13rem;
+      display:flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      padding: .8em;
+    }
+
+    footer > div {
+      text-align: center;
+    }
+    footer > div p {
+      font-size: 1.5rem;
+    }
+}
+
+/*Tablet version 2*/
+
+@media only screen and (min-width:651px) and (max-width:1024px) {
+
+  h1 {
+    font-size: 3.5rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+    nav {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(119, 134, 31);
+  }
+
+  nav > div > ul a {
+    font-size: 1.8rem;
+  }
+
+  nav > div > ul > li {
+    padding: 0 1em;
+  } 
+
+  .port-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2em;
+    padding: 1.2em;
+  }
+  .port-banner div {
+     margin: 0 auto;
+     max-width: 75%;
+  }
+ #myInfo p {
+  padding: .3em .7em;
+ }
+  footer > div{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+    #firstOne::after {
+    white-space: pre;
+    content: "";
+    padding: 2em;
+    }
+    
+    footer > div p + p::after {
+     white-space: pre;
+     content: "";
+     padding: 2em;
+    }
+
+      #firstOne, #secondOne {
+      font-size: 1.13rem;
+      display:flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      padding: .8em;
+    }
+
+    footer > div {
+      text-align: center;
+    }
+    footer > div p {
+      font-size: 1.5rem;
+    }
+}
+
+
 /*mobiile phone*/
 @media only screen and (min-width:350px) and (max-width:500px){
   
@@ -382,10 +529,6 @@ animation: moveShaping 5s infinite;
     padding: 0 1em;
   } 
 
-  /*Add animation trials for mobile*/ 
-  
-
-
   .port-banner {
     display: flex;
     flex-direction: column;
@@ -399,31 +542,40 @@ animation: moveShaping 5s infinite;
  #myInfo p {
   padding: .3em .7em;
  }
-  footer > div{
+  footer > div {
     display: flex;
     flex-direction: column-reverse;
   }
 
-    #firstOne::after {
-     white-space: pre;
-    content: "<< devressions >>";
-    padding: 2em;
-    line-height: 2rem;
+  footer > aside > div {
+    display: flex;
+    flex-direction: column;
+  }
 
+    #firstOne::after {
+    content: "";
+    padding: 1em;
     }
     
     footer > div p + p::after {
-     white-space: pre;
-     content: "<< Fili De Abreu (Yuushishi) >>";
-     padding: 2em;
-     line-height: 2rem;
+     content: "";
+     padding: 1em;
     }
 
     #firstOne, #secondOne {
-      font-size: .9rem;
+      font-size: 1rem;
+      display:flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      padding: 1em;
     }
 
     footer > div {
       text-align: center;
     }
+    footer > div p {
+      padding: 0;
+      font-size: 1.1rem;
+    }
 }
+
