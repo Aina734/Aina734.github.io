@@ -1,7 +1,10 @@
 html {
   font-size: 16px;
+  overflow-x: hidden;
 }
-
+body{
+  width: 100%;
+}
 h1, h2, h3 {
  font-family: "Macondo", "Georgia", "serif";
  font-weight: 400;
@@ -371,7 +374,6 @@ animation: moveShaping 5s infinite;
     nav {
     display: flex;
     flex-direction: column;
-    background-color: rgb(7, 57, 110);
   }
 
   nav > div > ul a {
@@ -444,7 +446,6 @@ animation: moveShaping 5s infinite;
     nav {
     display: flex;
     flex-direction: column;
-    background-color: rgb(119, 134, 31);
   }
 
   nav > div > ul a {
@@ -518,7 +519,6 @@ animation: moveShaping 5s infinite;
     nav {
     display: flex;
     flex-direction: column;
-    background-color: rgb(17, 24, 22);
   }
 
   nav > div > ul a {
