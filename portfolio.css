@@ -15,16 +15,9 @@ a, button {
   font-weight: 400;
   letter-spacing: .1rem;
   font-size: 2rem;
-
+  transition: all .3s;
 }
 
-button {
-  background-color: rgb(66, 29, 198);
-}
-
-div button:hover {
-  background-color: rgb(94, 20, 24);
-}
 p {
   font-family: "Andika", "Tahoma", "sans-serif";
   font-size: 1.3rem;
@@ -91,12 +84,12 @@ img {
     margin-top: 15px;
 }
 #carousel {
-    grid-row: 1/2; /*original 1/2*/
+    grid-row: 1/2; 
     grid-column: 1 / 8;  /*to adjust the items in the grid*/
     width: 100vw;
-    height: 600px; /*original 300px*/
+    height: 600px; 
     display: flex; /*to put all the items inline*/
-    align-items: center;
+   align-items: center;
     justify-content: center;
     overflow: hidden;
     transform-style: preserve-3d;
@@ -104,7 +97,7 @@ img {
     --items: 3;
     --middle: 2;
     --position: 1;
-    pointer-events: none;
+    pointer-events: auto
 }
 
 .item {
@@ -126,6 +119,24 @@ img {
     transform: rotateY(calc(-12deg * var(--r)))
     translateX(calc(-310px * var(--r)));
     z-index: calc((var(--position) - var(--abs)));
+}
+
+/*Try to activate the hover*/
+
+.item > a button:hover {
+  background-color: rgb(94, 12, 175);
+  border-bottom: solid rgb(51, 5, 97) 5px;
+  border-top: solid rgb(195, 135, 255) 7px;
+  border-right: solid rgb(137, 56, 217) 5px;
+  border-left: solid rgb(137, 56, 217) 3px;
+  font-size: 2.2rem;
+  color:rgb(226, 226, 226);
+  cursor: pointer;
+ 
+}
+.item > img:hover {
+  border: black double 3px;
+  animation: interactiveImg 2s alternate;
 }
 
 div.item:nth-of-type(1) {
@@ -200,11 +211,11 @@ animation: moveShaping 5s infinite;
 }
 
 #myInfo > div {
-   animation: aboutContainerBg 10s 1s linear infinite;
+animation: aboutContainerBg 10s 1s linear infinite;
 } 
 
 #myInfo div p {
-animation:readableText 6s linear forwards;
+animation:readableText 10s linear forwards;
 }
 
 
@@ -233,17 +244,17 @@ animation:readableText 6s linear forwards;
     
   }
   25% {
-    background: linear-gradient(rgba(255, 255, 255, .1), rgba(110, 110, 110, .8));
+    background: linear-gradient(rgba(255, 255, 255, .3), rgba(110, 110, 110, .3));
 
   }
   50% {
-    background: linear-gradient(rgba(255, 255, 255, .8), rgba(110, 110, 110, .5));
+    background: linear-gradient(rgba(255, 255, 255, .5), rgba(110, 110, 110, .5));
   }
   75% {
-    background: linear-gradient(rgba(255, 255, 255, 1), rgba(110, 110, 110, .2));
+    background: linear-gradient(rgba(255, 255, 255, 1), rgba(154, 153, 153, .8));
   }
   100% {
-    background: linear-gradient(rgba(255, 255, 255, 1));
+    background: linear-gradient(rgba(255, 255, 255, 1), rgb(255, 255, 255));
   }
   
 }
