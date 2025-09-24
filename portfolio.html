@@ -23,16 +23,16 @@
 
 
 
-    <body class="bg-radial-[at_75%_65%] from-amber-50 via-orange-100 to-amber-900">
+    <body class="bg-radial-[at_75%_65%] from-amber-50/90 via-orange-100/90 to-amber-900/50">
 
         <!--Nav area-->
 
-        <header id="nav" class="bg-gradient-to-b from-violet-600 via-indigo-900 to-violet-950
+        <header id="nav" class="mb-20 bg-gradient-to-b from-violet-600 via-indigo-900 to-violet-950
          shadow-xl shadow-yellow-950/70 mb-8">
         <nav class="flex flex-row justify-between">
 
              <div>
-                    <h1 class="text-4xl text-slate-200 pl-2">Stefania De Abreu</h1>
+                    <h1 class="text-5xl text-slate-200 pl-2">Stefania De Abreu</h1>
             </div>
         
             <div>
@@ -66,30 +66,30 @@
             <!--Hero banner start here-->
             <section class="port-banner">
                 
-                <h2 id="home" style="grid-area: hero-title" class="text-center pt-2 text-3xl">What will you find</h2>
+                <h2 id="home" style="grid-area: hero-title" class="mb-5 pt-2 text-center text-5xl content-center">What will you find</h2>
 
                         <div style="grid-area: hero-item-1;"
-                            class="flex flex-col justify-center items-center ml-4 py-4 min-w-70">
+                            class="flex flex-col justify-center items-center ml-4 py-4 min-w-70 bg-slate-50/70">
                                
-                                <h3 class="text-2xl px-4 text-center text-wrap">Static & Responsive Websites</h3>
+                                <h3 class="text-4xl px-4 py-6 text-center text-wrap">Static & Responsive Websites</h3>
                                 <img src="https://placehold.co/600x400/png" alt="Websites" 
-                                class="pt-2 w-full"> <!--A stone face or statue with dramatic funny position like a joke-->
+                                class="object-cover w-full border-8 border-double"> <!--A stone face or statue with dramatic funny position like a joke-->
                         </div>
                    
                         <div style="grid-area: hero-item-2;"
-                            class="flex flex-col justify-center items-center py-4 min-w-70">
+                            class="flex flex-col justify-center items-center py-4 min-w-70 bg-slate-50/70">
 
-                                <h3 class="text-2xl px-4 text-center text-wrap">Mini-games & Utility Apps</h3>
+                                <h3 class="text-4xl px-4 py-6 text-center text-wrap">Mini-games & Utility Apps</h3>
                                 <img src="https://placehold.co/600x400/png" alt="Mini games & Apps" 
-                                class="pt-2 w-full"> <!--A mini caracter head first in a box of toys and tools-->
+                                class="object-cover w-full border-8 border-double"> <!--A mini caracter head first in a box of toys and tools-->
                         </div>
 
                             <div  style="grid-area: hero-item-3;"
-                            class="flex flex-col justify-center items-center mr-4 py-4 min-w-70">
+                            class="flex flex-col justify-center items-center mr-4 py-4 min-w-70 bg-slate-50/70">
 
-                                 <h3 class="text-2xl px-4 text-center text-wrap">Full Stack Apps & Websites</h3> <!--A complete house?-->
+                                 <h3 class="text-4xl px-4 py-6 text-center text-wrap">Full Stack Apps & Websites</h3> <!--A complete house?-->
                                  <img src="https://placehold.co/600x400/png" alt="Full Stack" 
-                                 class="pt-2 w-full">
+                                 class="object-cover w-full border-8 border-double">
                         </div>
             </section>
             <!--End Hero banner-->
@@ -97,25 +97,25 @@
         <!--About start here-->
 
             <section id="myInfo">
-                <h2 id="about" class="text-center pt-4 pb-2 text-3xl">About Me</h2> 
+                <h2 id="about" class="my-20 text-center pt-4 pb-2 text-5xl content-center">About Me</h2> 
 
                 <div class="flex flex-col flex-wrap flex-grow flex-shrink px-5">
 
               <div>
-                <p>I'm Stefania De Abreu a Full Stack developer in training, I started my studies with the goal of 
+                <p class="px-4 py-2">I'm Stefania De Abreu a Full Stack developer in training, I started my studies with the goal of 
                     building my own functional fun and aesthetically pleasing websites
                 </p>
                 </div>
 
                 <div>
-                <p>I have build some simple utility tools and minigames making use of APIs or simple vanilla Javascript 
+                <p class="px-4 py-2">I have build some simple utility tools and minigames making use of APIs or simple vanilla Javascript 
                     I believe that is good to facilitate free tool and some simple passtime activities to our user for 
                     their own personal development, entertainment or satiate their own pure curiosity.
                 </p>
                 </div>
 
                 <div>
-                <p>My final goal is to become a Software Engineer capable of building different kind of utility programs 
+                <p class="px-4 py-2">My final goal is to become a Software Engineer capable of building different kind of utility programs 
                     and games.
                 </p>
                 </div>
@@ -126,7 +126,8 @@
 
 <!--slide of projects-->
 
-    <h2 id="projects" class="text-center pt-4 pb-2 text-3xl">Come and check out my Projects</h2>
+    <h2 id="projects" class="my-20 text-center pt-4 pb-2 text-5xl content-center">
+        Come and check out my Projects</h2>
     
     <div id="main-port-slide">
                 <input type="radio" name="position">
@@ -136,35 +137,35 @@
                 <article id="carousel">
                    
                         <div class="item">
-                            <h3 class="text-2xl">Static Pages & Responsive</h3>
+                            <h3 class="text-4xl">Static Pages & Responsive</h3>
                             <p><span>HTML</span>, <span>CSS</span>, <span>React</span> & <span>Tailwind</span></p>
                             <img src="https://placehold.co/600x400/png" alt="Static-Pages">
 
-                            <button onclick=""
-                            class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded">
+                            <button type="button" onclick=""
+                            class="my-2 text-white py-2 px-4 rounded">
                                 Visit
                             </button>
                         </div>
                   
                         <div class="item">
-                            <h3 class="text-2xl">Mini-games & Utility Apps</h3>
+                            <h3 class="text-4xl">Mini-games & Utility Apps</h3>
                             <p><span>HTML</span> <span>CSS</span> & <span>JS</span></p>
                             <img src="https://placehold.co/600x400/png" alt="Interactive pages">
 
-                            <button onclick=""
-                            class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded">
+                            <button type="button" onclick=""
+                            class="my-2 text-white py-2 px-4 rounded">
                                 Visit
                             </button>
                         </div>
                        
             
                         <div class="item">
-                            <h3 class="text-2xl">Full Stack Apps</h3>
-                            <p><span>HTML</span> <span>CSS</span> <span>JS</span> & <span>SQL</span></p>
+                            <h3 class="text-4xl">Full Stack Applications</h3>
+                            <p><span>HTML</span> <span>CSS</span> <span>JS</span> <span>React</span> & <span>SQL</span></p>
                             <img src="https://placehold.co/600x400/png" alt="Full Stack" >
 
-                              <button onclick=""
-                            class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded">
+                              <button type="button" onclick=""
+                            class="my-2 text-white py-2 px-4 rounded">
                                 Visit
                             </button>
                         </div>
@@ -176,14 +177,14 @@
         </main>
     <!--Start of footer section here-->
         <footer class="flex flex-col">
-
+            
             <aside>
                 <h2 id="contact" 
-                class="text-3xl text-center">Contact</h2>
+                class="my-20 text-5xl text-center content-center">Contact</h2>
                 <div class="flex justify-around items-center">
 
                 <div>
-                <h3 class="text-2xl text-center">Email:</h3>
+                <h3 class="text-4xl text-center">Email:</h3>
                 <p class="p-4">mymail@somemail.com</p>
                 </div>
                 
@@ -200,24 +201,25 @@
             </aside>
 
             <aside class="flex flex-col items-center">
-                <h3 class="text-2xl py-7">Thanks for Your Visit!</h3>
+                <h3 class="text-3xl my-7 content-center">Thank You for Your Visit!</h3>
 
                 <img src="https://placehold.co/600x400/png"
                  alt="Thank you!" 
-                  class="pb-7 min-w-80">
+                  class="min-w-80 object-cover border-8 border-double">
                  
-                <p class="italic text-lg pb-2">See you later!</p>
+                <p class="my-5 italic text-2xl pb-2">See you later!</p>
                 <a href="#nav" class="text-rose-800"><div><i class="fa-solid fa-3x fa-beat fa-house-chimney"
                     style="--fa-animation-duration: 1.5s"></i></div></a>
             </aside>
 
 
         <div class="flex flex-row justify-between items-center px-4">
-            <p>&copy; Stefania De Abreu (Aina734) 2025</p>
+            <p class="mb-5">&copy; Stefania De Abreu (Aina734) 2025</p>
             <div>
             <p class="credits pb-4" id="firstOne">Special Thanks and credit for carousel source code to: </p> <!--devressions-->
             <p class="credits" id="secondOne">Special Thanks and credit for graphic media to:</p><!--Add Fili if I use any of her illustrations-->
-            </div>
+        <button type="button">AHHHHHH</button>    
+        </div>
         </div>
         </footer>
     </body>

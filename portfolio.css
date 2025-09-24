@@ -1,6 +1,7 @@
 html {
   font-size: 16px;
   overflow-x: hidden;
+  background-color: #fff;
 }
 body{
   width: 100%;
@@ -13,12 +14,20 @@ a, button {
   font-family:"Aladin", "Garamond", "serif";
   font-weight: 400;
   letter-spacing: .1rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
 
 }
 
+button {
+  background-color: rgb(66, 29, 198);
+}
+
+div button:hover {
+  background-color: rgb(94, 20, 24);
+}
 p {
   font-family: "Andika", "Tahoma", "sans-serif";
+  font-size: 1.3rem;
 }
   .hero-banner li {
     font-family:"Aladin", "Garamond", "serif";
@@ -50,17 +59,26 @@ img {
     "hero-item-1 hero-item-1 hero-item-2 hero-item-2 hero-item-3 hero-item-3"
     "hero-item-1 hero-item-1 hero-item-2 hero-item-2 hero-item-3 hero-item-3";
 }
+
+/*About section*/
+
+#myInfo > div p::first-letter {
+  font-family: "Macondo", "Georgia", "serif";
+  font-size: 2rem;
+  font-weight: bold;
+}
 /*Slider styles*/
 
 
 #main-port-slide {
-   background:rgba(0, 0, 0, .95);
-    height: 600px;
+   background: linear-gradient( rgba(0, 0, 0, 1), rgba(0, 0, 0, .7),
+    rgba(0, 0, 0, .6), rgba(0, 0, 0, .7), rgba(0, 0, 0, 1));
+    height: 800px; 
     width: auto;
     margin: 0;
     display: grid;
-    grid-template-rows: 500px 100px;
-    grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+    grid-template-rows: 700px 100px; 
+    grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr; 
     align-items: center;
     justify-items: center;
     font-family: 'Poppins', sans-serif;
@@ -73,10 +91,10 @@ img {
     margin-top: 15px;
 }
 #carousel {
-    grid-row: 1 / 2;
+    grid-row: 1/2; /*original 1/2*/
     grid-column: 1 / 8;  /*to adjust the items in the grid*/
     width: 100vw;
-    height: 300px;
+    height: 600px; /*original 300px*/
     display: flex; /*to put all the items inline*/
     align-items: center;
     justify-content: center;
@@ -99,7 +117,7 @@ img {
     border-bottom-left-radius: 20%;
     background-color: #fff;
     position: absolute;
-    width: 300px;
+    width: 400px;
     height: auto;
     background-color: white;
     --r: calc(var(--position) - var(--offset));
@@ -182,9 +200,13 @@ animation: moveShaping 5s infinite;
 }
 
 #myInfo > div {
-   animation: aboutContainerBg 5s 1s linear infinite;
+   animation: aboutContainerBg 10s 1s linear infinite;
+} 
 
+#myInfo div p {
+animation:readableText 6s linear forwards;
 }
+
 
 /*Animation for title in nav*/
 @keyframes moveShaping {
@@ -205,34 +227,53 @@ animation: moveShaping 5s infinite;
 }
 
 /*Animation for about section background*/
+@keyframes readableText {
+  0% {
+    background: linear-gradient(rgba(255, 255, 255, .1), rgba(110, 110, 110, .1));
+    
+  }
+  25% {
+    background: linear-gradient(rgba(255, 255, 255, .1), rgba(110, 110, 110, .8));
 
+  }
+  50% {
+    background: linear-gradient(rgba(255, 255, 255, .8), rgba(110, 110, 110, .5));
+  }
+  75% {
+    background: linear-gradient(rgba(255, 255, 255, 1), rgba(110, 110, 110, .2));
+  }
+  100% {
+    background: linear-gradient(rgba(255, 255, 255, 1));
+  }
+  
+}
 @keyframes aboutContainerBg {
  
   0% {
-    background: linear-gradient(rgba(36, 36, 81,.3), rgba(225, 90, 182, .3),rgba(70, 30, 165, .3));
+    background: linear-gradient(rgba(128, 128, 250, .5), rgba(49, 32, 141, .5),rgba(70, 30, 165, .5));
   }
  
     15% {
-     background: linear-gradient(rgba(36, 36, 81, .5), rgba(225, 90, 182, .5),rgba(70, 30, 165, .5));
+     background: linear-gradient(rgba(128, 128, 250, .5), rgba(49, 32, 141, .5),rgba(70, 30, 165, .5));
   
      }
      30% {
-     background: linear-gradient(rgba(36, 36, 81, .7), rgba(225, 90, 182, .7),rgba(70, 30, 165, .7));
+     background: linear-gradient(rgba(128, 128, 250, .6), rgba(49, 32, 141, .6),rgba(70, 30, 165, .6));
      
      }
       40% {
-     background: linear-gradient(rgb(216, 209, 201), rgba(255, 249, 236, 0.7),rgba(255, 244, 191, 0.7), rgba(255, 250, 198, 0.7));
+     background: linear-gradient(rgb(128, 128, 250, .7), rgba(49, 32, 141, .7),rgba(70, 30, 165, .7));
      }
       55% {
-     background: linear-gradient(rgb(216, 209, 201, .8), rgba(255, 249, 236, .8),rgba(255, 244, 191, .8), rgba(255, 250, 198, .8));
+     background: linear-gradient(rgb(128, 128, 250, .8), rgba(49, 32, 141, .8),rgba(70, 30, 165, .8));
      }
       90% {
-     background: linear-gradient(rgb(216, 209, 201, 1), rgba(255, 249, 236, 1),rgba(255, 244, 191, 1), rgba(255, 250, 198, 1));
+     background: linear-gradient(rgb(128, 128, 250, 1), rgba(49, 32, 141, 1),rgba(70, 30, 165, 1));
      }
   
      
      100% {
-     background: linear-gradient(rgb(216, 209, 201, 1), rgba(255, 249, 236, 1),rgba(255, 244, 191, 1), rgba(255, 250, 198, 1));
+     background: linear-gradient(rgb(128, 128, 250, 1), rgba(49, 32, 141, 1),rgba(70, 30, 165, 1));
      }
 }
 
@@ -532,12 +573,15 @@ animation: moveShaping 5s infinite;
   .port-banner {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    margin: 0 auto;
     gap: 1.2em;
     padding: 1.2em;
   }
   .port-banner div {
      margin: 0;
+  }
+  .item {
+    width: 300px;
   }
  #myInfo p {
   padding: .3em .7em;
