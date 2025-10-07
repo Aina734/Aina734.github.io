@@ -10,6 +10,10 @@ h1, h2, h3 {
  font-family: "Macondo", "Georgia", "serif";
  font-weight: 400;
 }
+ .item p, p > span {
+  font-size: .8em;
+  font-family: "Andika", "Tahoma", "sans-serif";
+}
 a, button {
   font-family:"Aladin", "Garamond", "serif";
   font-weight: 400;
@@ -38,6 +42,9 @@ div {
 }
 img {
   height: auto;
+}
+aside > img {
+    background-color: aliceblue;
 }
 /*Banner area*/
 .port-banner{
@@ -81,7 +88,7 @@ img {
     width: auto;
     height: auto;
     border-radius: 30%;
-    margin-top: 15px;
+    margin-top: 5px;
 }
 #carousel {
     grid-row: 1/2; 
@@ -102,7 +109,7 @@ img {
 
 .item {
     text-align: center;
-    padding: 50px;
+    padding: 3em 5em;
     border: 3px solid black;
     border-top-right-radius: 20%;
     border-top-left-radius: 10%;
@@ -111,7 +118,7 @@ img {
     background-color: #fff;
     position: absolute;
     width: 400px;
-    height: auto;
+    height:auto;
     background-color: white;
     --r: calc(var(--position) - var(--offset));
     --abs: max(calc(var(--r) * -1), var(--r));
@@ -134,7 +141,29 @@ img {
   cursor: pointer;
  
 }
-.item > img:hover {
+.item > div {
+  height: 400px;
+ background-image: url("/images/pagina\ 1.png");
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size:cover;
+ border-radius: 30px;
+}
+.item > .img-static {
+  background-image: url("/images/pagina\ 2.png");
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size:cover;
+ border-radius: 30px;
+}
+.item > .img-utility {
+background-image: url("/images/pagina\ 3.png");
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size:cover;
+ border-radius: 30px;
+}
+.item > div:hover {
   border: black double 3px;
   animation: interactiveImg 2s alternate;
 }
@@ -444,7 +473,14 @@ animation:readableText 10s linear forwards;
     padding: 1.2em;
   }
   .port-banner div {
-     margin: 0;
+     margin: 0 auto;
+  }
+  #carousel div > h3 {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  button {
+    font-size: 1.5rem;
   }
  #myInfo p {
   padding: .3em .7em;
